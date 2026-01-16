@@ -19,8 +19,11 @@
 ||saxysec.com^
 ||cdnnodedns.cn^
 
-! ===== Bilibili =====
+! ===== Bilibili PCDN =====
+||v1d.szbdyd.com^
+||*.v1d.szbdyd.com^
 ||mcdn.bilivideo.cn^
+||*.mcdn.bilivideo.cn^
 ||szbdyd.com^
 
 ! ===== QQ / Tencent P2P =====
