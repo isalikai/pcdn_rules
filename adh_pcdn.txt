@@ -1,0 +1,61 @@
+! ===============================
+! PCDN / P2P / 回传节点 Blocklist
+! 去重 + AdGuard Home 专用
+! ===============================
+
+! ===== 通用 / 已知 PCDN 平台 =====
+||ppio.cloud^
+||yfp2p.net^
+||yfcdn.net^
+||yfcloud.com^
+||xycdn.com^
+||p2cdn.com^
+||uhabo.com^
+||nexusedgeio.com^
+||onethingpcs.com^
+||pkoplink.com^
+||ietheivaicai.com^
+||tianwenca.com^
+||saxysec.com^
+||cdnnodedns.cn^
+
+! ===== Bilibili =====
+||mcdn.bilivideo.cn^
+||szbdyd.com^
+
+! ===== QQ / Tencent P2P =====
+||p2p.qq.com^
+||p2ptun.qq.com^
+||p2p.huya.com^
+||p2pupgrade.gamedl.qq.com^
+||p2pupdate.gamedl.qq.com^
+||tp2p.kg.qq.com^
+
+! ===== Microsoft PCDN =====
+||qn-cdnfile1pcdn.msstatic.com^
+||livewebbs2pcdn.msstatic.com^
+
+! ===== NetEase / 风控 / 回传 =====
+||kuiniuca.com^
+||xinqiucc.com^
+||ac.dun.163.com^
+||fp-upload.dun.163.com^
+
+! ===== Douyu P2P / STUN =====
+||p2perrorlog.douyucdn.cn^
+||p2plog.douyucdn.cn^
+||stun.douyucdn.cn^
+||stun1.douyucdn.cn^
+
+! ===== Kuaishou P2P =====
+||pcdn.yximgs.com^
+
+! ===== 关键词 / 泛匹配（PCDN 特征）=====
+||p2p*.qq.com^
+||p2p-*.douyucdn.cn^
+||p2pchunk-*.douyucdn.cn^
+||dyp2p-*.douyucdn.cn^
+||p2plive-*.douyucdn.cn^
+||stun*.douyucdn.cn^
+||*-p2p.pull.yximgs.com^
+||*-p2p-v2.pull.yximgs.com^
