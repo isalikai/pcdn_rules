@@ -1,64 +1,116 @@
-! ===============================
-! PCDN / P2P / 回传节点 Blocklist
-! 去重 + AdGuard Home 专用
-! ===============================
+! =================================================
+! PCDN / P2P Blocklist (Merged & Deduplicated)
+! 来源：多来源合并（SophiEZzz / anti-AD / 快手 / B站 / 腾讯 / 斗鱼 / 金山云等）
+! Target: AdGuard Home
+! =================================================
 
-! ===== 通用 / 已知 PCDN 平台 =====
+! ===== 通用 / 已知 PCDN 服务商 =====
 ||ppio.cloud^
-||yfp2p.net^
-||yfcdn.net^
-||yfcloud.com^
+||bsccdn.net^
+||pkoplink.com^
+||saxysec.com^
+||uhabo.com^
 ||xycdn.com^
 ||p2cdn.com^
-||uhabo.com^
-||nexusedgeio.com^
 ||onethingpcs.com^
-||pkoplink.com^
+||nexusedgeio.com^
 ||ietheivaicai.com^
 ||tianwenca.com^
-||saxysec.com^
+||jomodns.cn^
+||gjfzpt.cn^
 ||cdnnodedns.cn^
 
 ! ===== Bilibili PCDN =====
+||szbdyd.com^
 ||v1d.szbdyd.com^
 ||*.v1d.szbdyd.com^
 ||mcdn.bilivideo.cn^
 ||*.mcdn.bilivideo.cn^
-||szbdyd.com^
+||pcdn.yximgs.com^
+||*-pcdn-*.biliapi.net^
+||stun*.chat.bilibili.com^
+||*-p2p-*.chat.bilibili.com^
 
-! ===== QQ / Tencent P2P =====
+! ===== Tencent / QQ / Huya =====
 ||p2p.qq.com^
 ||p2ptun.qq.com^
 ||p2p.huya.com^
-||p2pupgrade.gamedl.qq.com^
+||*.p2p.huya.com^
 ||p2pupdate.gamedl.qq.com^
+||p2pupgrade.gamedl.qq.com^
 ||tp2p.kg.qq.com^
+||stun.qqlive.qq.com^
+||musicstun.p2p.qq.com^
+||stun-a1.qq.com^
+||signal.qvb.qcloud.com^
+||stun*.qvb.qcloud.com^
 
-! ===== Microsoft PCDN =====
-||qn-cdnfile1pcdn.msstatic.com^
-||livewebbs2pcdn.msstatic.com^
+! ===== Douyu P2P / STUN =====
+||stun.douyucdn.cn^
+||stun1.douyucdn.cn^
+||p2p-ali.douyucdn.cn^
+||p2pchunk-hw.douyucdn.cn^
+||p2pchunk-table.douyucdn.cn^
+||p2pchunk-ws.douyucdn.cn^
+||p2perrorlog.douyucdn.cn^
+||p2plive-ali.douyucdn.cn^
+||p2plive-ws.douyucdn.cn^
+||p2plog.douyucdn.cn^
+||p2pvod-ws.douyucdn.cn^
+||p2pchunk-*.douyucdn.cn^
+||p2pable-*.douyucdn.cn^
+||dyp2p-*.douyucdn2.cn^
+||bjfesdk.douyucdn.cn^
+||dotcounter.douyucdn.cn^
+||sdkapi.douyucdn.cn^
 
-! ===== NetEase / 风控 / 回传 =====
+! ===== 快手 / Kuaishou =====
+||*.pcdn.yximgs.com^
+||config-p2p-*.vcloud.ks-live.com^
+||slb-p2p.vcloud.ks-live.com^
+||yximgs-webrtc.liveplay.myqcloud.com^
+||*pcdn*.xxpkg.com^
+||p2p-punch.xxpkg.com^
+||p2p-punch-*.xxpkg.com^
+/^(.+)-p2p-pull\.(video|live)-voip\.com$/
+/^(.+)-p2p\.pull\.yximgs\.com$/
+/^(.+)-p2p-(.+)\.pull\.yximgs\.com$/
+
+! ===== NetEase / Ximalaya / iQIYI =====
 ||kuiniuca.com^
 ||xinqiucc.com^
 ||ac.dun.163.com^
 ||fp-upload.dun.163.com^
+||pcdn.xmcdn.com^
+||tpa-hcdn.iqiyi.com^
 
-! ===== Douyu P2P / STUN =====
-||p2perrorlog.douyucdn.cn^
-||p2plog.douyucdn.cn^
-||stun.douyucdn.cn^
-||stun1.douyucdn.cn^
+! ===== 芒果 / HITV =====
+||stun.hitv.com^
 
-! ===== Kuaishou P2P =====
-||pcdn.yximgs.com^
+! ===== 56网 / 搜狐视频 =====
+||p2p.tracker.tv.sohu.com^
 
-! ===== 关键词 / 泛匹配（PCDN 特征）=====
+! ===== 星域云 / 网心 =====
+||conf-darwin.xycdn.com^
+||seeds*-darwin.xycdn.com^
+||seeds-open.xycdn.com^
+||ttxyajs.data.kuiniuca.com^
+||sd-gl.xycdn.com^
+
+! ===== 金山云 =====
+||*.stun.yfp2p.net^
+
+! ===== 泛匹配 / 特征级拦截（慎用但有效）=====
 ||p2p*.qq.com^
 ||p2p-*.douyucdn.cn^
 ||p2pchunk-*.douyucdn.cn^
 ||dyp2p-*.douyucdn.cn^
 ||p2plive-*.douyucdn.cn^
 ||stun*.douyucdn.cn^
-||*-p2p.pull.yximgs.com^
-||*-p2p-v2.pull.yximgs.com^
+
+! ===== 正则规则（PCDN 特征）=====
+/.*pcdn.*biliapi\.net/
+/.*pcdn.*youku\.com/
+/.*p2p.*douyucdn\.cn/
+/.*p2p.*qq\.com/
+/trk-([0-9\-]+)\.douyucdn\.cn/
